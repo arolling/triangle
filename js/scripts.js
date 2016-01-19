@@ -16,9 +16,9 @@ $(document).ready(function() {
   $('form#triSubmit').submit(function(event){
     event.preventDefault();
     $('#output').hide();
-    var side1 = parseInt($('input#value1').val());
-    var side2 = parseInt($('input#value2').val());
-    var side3 = parseInt($('input#value3').val());
+    var side1 = parseFloat($('input#value1').val());
+    var side2 = parseFloat($('input#value2').val());
+    var side3 = parseFloat($('input#value3').val());
 
     var triType = triangle(side1, side2, side3);
     console.log(triType);

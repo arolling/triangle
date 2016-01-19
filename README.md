@@ -13,7 +13,7 @@ This website will take three leg lengths from the user and calculate:
 
 ## Known Bugs
 
-Does not gracefully handle non numerical input or non integers.
+Does not gracefully handle non numerical input.
 
 
 Copyright (c) 2016 **Abigail Rolling and Brad Pizzimenti**
