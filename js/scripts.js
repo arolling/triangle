@@ -1,5 +1,7 @@
 var triangle = function(a,b,c) {
-  if ( a+b <= c || a+c <= b || b+c <= a ) {
+
+  if ( ((a + b) <= c) || ((a + c) <= b) || ((b + c) <= a) ) {
+    console.log(a,b,c)
     return false;
   } else if (a === b && b === c) {
     return "equilateral";
@@ -9,3 +11,21 @@ var triangle = function(a,b,c) {
     return "scalene";
   }
 };
+
+$(document).ready(function() {
+  $('form#triSubmit').submit(function(event){
+    var side1 = parseInt($('input#value1').val());
+    var side2 = parseInt($('input#value2').val());
+    var side3 = parseInt($('input#value3').val());
+
+    var triType = triangle(side1, side2, side3);
+    console.log(triType);
+    $("#triWrite").html(triType);
+
+
+
+
+    event.preventDefault();
+  });
+
+}); //end ready function

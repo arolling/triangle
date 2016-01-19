@@ -1,10 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <title>Triangle Test</title>
+    <script src="js/jquery-1.12.0.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/stylesheet" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" media="screen">
   </head>
   <body>
+    <div class="container">
+      <h1>What Kind of Triangle Am I?</h1>
+      <form class="form-inline" id="triSubmit">
+        <div class="form-group">
+          <label for="value1">Leg 1 Length</label>
+          <input id="value1" class="form-control">
+        </div>
 
+        <div class="form-group">
+          <label for="value2">Leg 2 Length</label>
+          <input id="value2" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="value3">Leg 3 Length</label>
+          <input id="value3" class="form-control">
+        </div>
+
+        <button type="submit" class="btn btn-submit">Submit</button>
+
+      </form>
+
+
+        <h1>Type:</h1>
+        <span id="triWrite"></span>
+
+    </div>
   </body>
 </html>
