@@ -33,10 +33,6 @@ $(document).ready(function() {
     }
     $('#output').fadeIn();
 
-
-
-
-
   });
 
 }); //end ready function
