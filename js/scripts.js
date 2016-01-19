@@ -14,18 +14,29 @@ var triangle = function(a,b,c) {
 
 $(document).ready(function() {
   $('form#triSubmit').submit(function(event){
+    event.preventDefault();
+    $('#output').hide();
     var side1 = parseInt($('input#value1').val());
     var side2 = parseInt($('input#value2').val());
     var side3 = parseInt($('input#value3').val());
 
     var triType = triangle(side1, side2, side3);
     console.log(triType);
-    $("#triWrite").html(triType);
+    $("#side1").html(side1);
+    $("#side2").html(side2);
+    $("#side3").html(side3);
+
+    if (!triType) {
+      $("#triWrite").html("not a triangle");
+    } else {
+      $("#triWrite").html(triType);
+    }
+    $('#output').fadeIn();
 
 
 
 
-    event.preventDefault();
+
   });
 
 }); //end ready function
