@@ -20,18 +20,23 @@ $(document).ready(function() {
     var side2 = parseFloat($('input#value2').val());
     var side3 = parseFloat($('input#value3').val());
 
-    var triType = triangle(side1, side2, side3);
-    console.log(triType);
-    $("#side1").html(side1);
-    $("#side2").html(side2);
-    $("#side3").html(side3);
-
-    if (!triType) {
-      $("#triWrite").html("not a triangle");
+    if (Math.sign(side1) != 1 || Math.sign(side2) != 1 || Math.sign(side3) != 1) {
+      alert("One of your leg values is not a positive number");
     } else {
-      $("#triWrite").html(triType);
+
+      var triType = triangle(side1, side2, side3);
+      console.log(triType);
+      $("#side1").html(side1);
+      $("#side2").html(side2);
+      $("#side3").html(side3);
+
+      if (!triType) {
+        $("#triWrite").html("not a triangle");
+      } else {
+        $("#triWrite").html(triType);
+      }
+      $('#output').fadeIn();
     }
-    $('#output').fadeIn();
 
   });
 

@@ -11,9 +11,12 @@ This website will take three leg lengths from the user and calculate:
 - if the inputs form a triangle
 - if so, what type of triangle
 
+## Fixes
+
+v.0.2 Math.sign now parses input for non-positive number to throw alert
+
 ## Known Bugs
 
-Does not gracefully handle non numerical input.
 
 
 Copyright (c) 2016 **Abigail Rolling and Brad Pizzimenti**
